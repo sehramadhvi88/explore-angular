@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Angular Js | Custom Drirective</title>
+<script src="angular.min.js"></script>
+<script src="controller-customdirective.js"></script>
+
+</head>
+<body ng-app="mainApp" ng-controller="app">	
+
+<!-- <input ng-model="name" type="text"> -->
+
+<div my-first-directive ></div> <!-- work for A-->
+<!-- <my-first-directive></my-first-directive>  <!-- work for E-->
+
+ 
+
+<!--<div my-second-drirective></div>
+<p my-second-drirective></p>
+<h2 my-second-drirective></h2>
+ -->
+ 
+<p>First variable name is : {{namevar}} </p>
+
+<p> Second variable age : {{age}} </p>
+
+<p>-----------directive------------</p>
+
+<my-second-drirective name="{{namevar}}" age="age"></my-second-drirective>
+
+</body>
+
+</html>

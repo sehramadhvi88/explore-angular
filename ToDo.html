@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Angular Js | ToDo App</title>
+<script src="angular.min.js"></script>
+<script src="controller-todo.js"></script>
+<style type="text/css">
+span.done-true{
+color: gray;
+font-style: italic;
+text-decoration: line-through;
+}
+span[contentEditable=true]{
+	background: gray;
+	padding: 3px
+}
+</style>
+</head>
+<body ng-app="mainApp" ng-controller="app">	
+
+<h1 style="text-align:center;">Add a task</h1>
+<input ng-model="task" ng-keyup="searchEnter()" type="text" style="display:block;margin:0 auto;
+padding:5px;font-size:15px:width:300px">
+
+<div id="taskToShow">
+	<ul>
+		<li ng-repeat="onetask in tasks track by $index">
+			<span contentEditable="false" ng-dblclick="contentEdit(onetask.taskMsg)" ng-model="onetask.taskMsg" ng-keyup="enterAgain(onetask.taskMsg)" class="done-{{onetask.status}}">
+			<input type="checkbox" ng-model="onetask.status">
+				{{onetask.taskMsg}}
+			</span>
+		</li>
+	</ul>
+
+</div>
+
+</body>
+
+</html>

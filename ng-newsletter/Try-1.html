@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Angular Js</title>
+<script src="angular.min.js"></script>
+<script src="controller-1.js"></script>
+ 
+
+</head>
+<body ng-app="mainApp" >
+
+<div>	
+
+	<hr/>
+
+<h4>Two way data binding</h4>
+
+<input type="text" ng-model="message" />
+	<span>{{message}} {{ user.email }}</span></div>
+
+</hr>
+
+<h5>Controllers </h5>
+
+<div ng-controller="app">
+<a ng-click="shouldShowDiv = !shouldShowDiv">Show content below</a>
+<div ng-show="shouldShowDiv">This div will be shown only if <em>shouldShowDiv</em> is true</div>
+<div ng-hide="shouldShowDiv">This div will be hidden if <em>shouldShowDiv</em> is not true</div>
+
+<a ng-click="changeShow()">Show content below1</a>
+<div ng-show="shouldShowDiv1">This div will be shown only if <em>shouldShowDiv</em> is true</div>
+<div ng-hide="shouldShowDiv1">This div will be hidden if <em>shouldShowDiv</em> is not true</div>
+
+<div ng-init="count = 0">
+  <a ng-click="count = count + 1">Add one</a>
+  <h3>Double the count is: {{ 2 * count }}</h3>
+</div>
+
+
+<button ng-init="counter=0" ng-click="counter=counter+1">Add One</button>
+<h5>Current Counter:{{counter}}</h5>
+
+
+<h5>Parent scope and child scope</h5>
+
+<span>{{ user.email }}</span><br>
+<span>{{ $parent.user.email }}</span> <!--  accessing parents scope object-->
+
+<h5>{{clock}}</h5>
+
+
+</div>
+
+<hr/>
+
+<h5>Parent & child controller </h5>
+<div ng-controller="ParentController">
+  <div ng-controller="ChildController">
+    <input type="text" ng-model="person.name" placeholder="Name"></input><br>
+    <a ng-click="sayHello()">Say-hello</a><br>
+    <a ng-click="reset()">Reset</a>
+  
+  	"greeted": {{person.greeted}} "name":{{person.name}}
+
+  	<br>
+
+  	{{person}}
+
+  </div>
+  
+</div>
+
+</body>
+
+</html>

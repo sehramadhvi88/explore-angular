@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Angular Js | Http Service | Search</title>
+<script src="angular.min.js"></script>
+<script src="controller-http.js"></script>
+ 
+
+</head>
+<body ng-app="mainApp">
+
+	<input type="text" ng-model="searchBox">
+
+	<div ng-controller="people">
+
+		<ul>
+			<h2>name and ages of programmers local </h2>
+
+			<li ng-repeat="person in persons | filter:searchBox">
+				{{"Name: "+person.name + " Age :" +person.age + 
+				" fav-color: "+person.favcolor}}
+			</li>
+
+		</ul>	
+
+
+		<ul>
+			<h2>name and ages of programmers global</h2>
+
+			<li ng-repeat="person in persons | filter:globalSearch">
+				{{"Name: "+person.name + " Age :" +person.age + 
+				" fav-color: "+person.favcolor}}
+			</li>
+
+		</ul>
+
+
+	</div>
+
+	<div id="searchBoxes">
+		Global Search Filter : <input type="text" ng-model="globalSearch.$"> <!-- filter out anything -->
+		<br>
+
+		Name filter:<input type="text" ng-model="globalSearch.name"><br>
+		Age Filter:<input type="text" ng-model="globalSearch.age"><br>
+		Color filter:<input type="text" ng-model="globalSearch.favcolor"><br>
+
+	</div>	
+
+
+
+</body>
+
+</html>

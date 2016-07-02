@@ -1,0 +1,37 @@
+{
+	
+"records":[
+
+	{
+		"name":"madhvi",
+		"age":"18",
+		"favcolor":"orange"
+	},
+	{
+		"name":"sachit",
+		"age":"19",
+		"favcolor":"green"
+	},
+	{
+		"name":"alex",
+		"age":"27",
+		"favcolor":"red"
+	},
+	{
+		"name":"anonymous",
+		"age":"18",
+		"favcolor":"black"
+	},
+	{
+		"name":"mohit",
+		"age":"20",
+		"favcolor":"black"
+	}
+
+
+
+]
+
+
+
+}

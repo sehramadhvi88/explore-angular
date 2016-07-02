@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Angular Js | show</title>
+<script src="angular.min.js"></script>
+<script src="controller-show.js"></script>
+
+</head>
+<body ng-app="mainApp" ng-controller="app">	
+
+<button ng-click="toggle()">toggle message</button>
+
+<div class="message" ng-show="show == 'msg1'">this is my message1</div>
+<div class="message" ng-show="show == 'msg2'">this is my message2</div>
+
+</body>
+
+</html>

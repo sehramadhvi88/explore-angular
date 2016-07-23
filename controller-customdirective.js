@@ -10,7 +10,7 @@ app.directive('myFirstDirective',function(){
 	}
 
 	return{
-		template:"hello world !!!",
+		template:"hello world new custom directive!!!",
 		restrict: 'EA', // 'E' , 'EA'
 		link : linkFunction
 		//templateUrl:"test.html"
